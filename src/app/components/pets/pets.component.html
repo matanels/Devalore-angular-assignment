@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" *ngIf="!!pets">
+  <div
+    fxFlex="25%"
+    fxFlex.xs="100%"
+    fxFlex.sm="33%"
+    *ngFor="let pet of pets; let i = index"
+  >
+    <mat-card class="example-card" *ngIf="i < 10">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ pet.Name }}</mat-card-title>
+        <mat-card-title>{{ pet.Age }}</mat-card-title>
+        <mat-card-title>{{ pet.Type }}</mat-card-title>
+        <mat-card-title>{{ pet.Color }}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>

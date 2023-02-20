@@ -1,0 +1,38 @@
+<form class="form">
+  <mat-form-field class="full-width">
+    <mat-label>Company (disabled)</mat-label>
+    <input matInput disabled value="Devalore" />
+  </mat-form-field>
+
+  <table class="full-width" cellspacing="0">
+    <tr>
+      <mat-form-field class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field class="full-width">
+        <mat-label>Age</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field appearance="fill">
+        <mat-label>Pet</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="pet">
+          <mat-option *ngFor="let pet of pets" [value]="pet.value">
+            {{ pet.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-radio-group aria-label="Select an color">
+        <mat-radio-button value="1">Black</mat-radio-button>
+        <mat-radio-button value="2">White</mat-radio-button>
+      </mat-radio-group>
+    </tr>
+  </table>
+  <button mat-flat-button color="primary">Submit</button>
+</form>
